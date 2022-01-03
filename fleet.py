@@ -1,6 +1,6 @@
 from robot import Robot
 from weapon import Weapon
-
+#Here i will establish a fleet, by creating the instance of the weapons and robots themselves.
 class Fleet:
     def __init__(self):
         self.storage = []

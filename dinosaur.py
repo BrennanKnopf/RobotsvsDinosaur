@@ -1,4 +1,4 @@
-class Dinosaur:
+class Dinosaur: #the dinosaurs need to be established with what kind they are, their health, their attack power, their engergy and the type of attack they will use
     def __init__(self, kind, attack_power):
         self.kind = kind
         self.health = 100
@@ -12,13 +12,11 @@ class Dinosaur:
         for attack in attack_choice:
             if attack_choice == 1:
                print(f'{self.kind} attacked {robot_attacked.name} with {self.attack_type[0]}')
-               break
             elif attack_choice == 2:
                 print(f'{self.kind} attacked {robot_attacked.name} with {self.attack_type[1]}')
-                break
             elif attack_choice == 3:
                 print(f'{self.kind} attacked {robot_attacked.name} with {self.attack_type[3]} ')
-                break
+            
     
         self.energy -= 10
         robot_attacked.health -= self.attack_power

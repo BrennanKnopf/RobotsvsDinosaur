@@ -1,5 +1,5 @@
 from weapon import Weapon
-
+#The robots need a name, health level, they will use a weapon, so i need a list of weapons to choose from
 class Robot:
     def __init__(self, name):
         self.name = name
@@ -14,13 +14,11 @@ class Robot:
         for attack in attack_choice:
             if attack_choice == 1:
                print(f'{self.name} attacked {dinosaur_attacked.type} with {self.weapon_choice[0]}')
-               break
             elif attack_choice == 2:
                 print(f'{self.name} attacked {dinosaur_attacked.type} with {self.weapon_choice[1]}')
-                break
             elif attack_choice == 3:
                 print(f'{self.name} attacked {dinosaur_attacked.type} with {self.weapon_choice[3]} ')
-                break
+                
 
         self.energy_level -= 10
         dinosaur_attacked -= self.weapon.attack_power

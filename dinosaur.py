@@ -6,7 +6,7 @@ class Dinosaur: #the dinosaurs need to be established with what kind they are, t
         self.energy = 100
         self.attack_type = ('bite', 'tail smash', 'headbutt')
     
-    def dino_attack(self, robot_attacked):
+    def attack_robot(self, robot_attacked):
         if self.energy > 10:
            attack_choice = int(input(f'Choose what Dinosaur to attack with: (1) {self.attack_type[0]}, (2) {self.attack_type[1]}, (3) {self.attack_type[2]}.')) 
         for attack in attack_choice:

@@ -21,7 +21,7 @@ class Robot:
                 
 
         self.energy_level -= 10
-        dinosaur_attacked -= self.weapon.attack_power
+        dinosaur_attacked.health -= self.weapon.attack_power
         print(f'{self.name} energy level is now {self.energy_level}') 
         print(f'{dinosaur_attacked.kind} health is now {dinosaur_attacked.health}')       
 

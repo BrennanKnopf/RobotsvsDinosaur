@@ -1,5 +1,5 @@
-import robot
-import dinosaur
+from robot import Robot
+from dinosaur import Dinosaur
 from herd import Herd
 from fleet import Fleet
 import random
@@ -10,10 +10,11 @@ class Battlefield:
     def __init__(self):
         self.herd = Herd()
         self.fleet = Fleet()
+        
 
     def run_game(self):
         self.display_welcome()
-        self.team = self.choose_team()
+        self.choose_team()
         self.battle()
         self.display_winners()
     
@@ -26,9 +27,10 @@ class Battlefield:
         print('Opponents are defeated when they reach 0 health')
         print('Choose which team you would like.')
         print('Good Luck')
-
+    
+    
     def choose_team(self):
-        team_choice = int(input('Choose your team: (1) Robots; (2) Dinosaurs'))
+        team_choice = int(input('Choose your team: For Robots press (1) or for Dinosaurs press (2)'))
         if team_choice == 1:
             print('You chose the fleet of Robots')
             return team_choice
@@ -94,15 +96,15 @@ class Battlefield:
                         print(f'{self.fleet.robots[0].name} is out.')
                         self.fleet.robots.remove(self.fleet.robots[0])
                     
+    
 
 
-
-    def dino_turn(self, dinosaur):
+    def dino_turn(self):
         self.show_dino_opponent_options()
         self.herd.dinosaurs[0].attack_robot(self.fleet.robots[0])
         
 
-    def robo_turn(self, robot):
+    def robo_turn(self):      
         self.show_robot_opponent_options()
         self.fleet.robots[0].attack_dinosaur(self.herd.dinosaurs[0])
 
@@ -121,7 +123,12 @@ class Battlefield:
             turn += 1
 
     def display_winners(self):
-       if len(self.fleet.robots) = 0
+        if len(self.fleet.robots) == 0:
+           print('The robots have been defeated.')
+           print('Dinosaurs are the victor. RAAAAWR')
+        elif len(self.herd.dinosaurs) == 0:
+            print('The dinosaurs have been defeated.')
+            print('Robots are the victor. Bing Bong')
 
     
         

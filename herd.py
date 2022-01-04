@@ -13,4 +13,4 @@ class Herd:
         self.dinosaurs.append(dino_one)
         self.dinosaurs.append(dino_two)
         self.dinosaurs.append(dino_three)
-    
+

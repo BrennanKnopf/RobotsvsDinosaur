@@ -8,12 +8,12 @@ import random
 
 class Battlefield:
     def __init__(self):
+        self.display_welcome()
         self.herd = Herd()
         self.fleet = Fleet()
         
 
     def run_game(self):
-        self.display_welcome()
         self.choose_team()
         self.battle()
         self.display_winners()
@@ -25,6 +25,7 @@ class Battlefield:
         print('Every time you attack it will cost you 10 energy')
         print('The winner will be decided when all opponents have been defeated')
         print('Opponents are defeated when they reach 0 health')
+        print('You will need to choose the weapons you want your robots to have.')
         print('Choose which team you would like.')
         print('Good Luck')
     

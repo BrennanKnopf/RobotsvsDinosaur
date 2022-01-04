@@ -13,6 +13,7 @@ class Robot:
     weapon_three = Weapon('grenade', 50) 
     
     
+    
     def attack_dinosaur(self, dinosaur_attacked):
         if self.energy_level > 10:
             attack_choice = int(input(f'Choose what weapon to attack with: (1) {self.weapon_choice[0]}, (2) {self.weapon_choice[1]}, (3) {self.weapon_choice[2]}.'))

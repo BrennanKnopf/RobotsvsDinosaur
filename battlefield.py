@@ -3,6 +3,7 @@ from dinosaur import Dinosaur
 from herd import Herd
 from fleet import Fleet
 import random
+import time
 
 
 
@@ -20,13 +21,21 @@ class Battlefield:
     
     def display_welcome(self):
         print('Welcome to Robots vs Dinosaurs.')
+        time.sleep(1.5)
         print('Each team will start with 100 health.')
+        time.sleep(1.5)
         print('Each team will also start with 100 energy')
+        time.sleep(1.5)
         print('Every time you attack it will cost you 10 energy')
+        time.sleep(1.5) 
         print('The winner will be decided when all opponents have been defeated')
+        time.sleep(1.5)
         print('Opponents are defeated when they reach 0 health')
+        time.sleep(1.5)
         print('You will need to choose the weapons you want your robots to have.')
+        time.sleep(1.5)
         print('Choose which team you would like.')
+        time.sleep(1.5)
         print('Good Luck')
     
     
@@ -111,17 +120,15 @@ class Battlefield:
 
 
     def show_dino_opponent_options(self):
-       turn = 1
-       for character in self.fleet.robots:
+       for character in enumerate(self.fleet.robots):
             print(f'{character.name} has {character.health} health.')
-            turn += 1
+            time.sleep(1)
 
 
     def show_robot_opponent_options(self):
-        turn = 1
-        for character in self.herd.dinosaurs:
+        for character in enumerate(self.herd.dinosaurs):
             print(f'{character.kind} has {character.health} health. ')
-            turn += 1
+            time.sleep(1)
 
     def display_winners(self):
         if len(self.fleet.robots) == 0:
